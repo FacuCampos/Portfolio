@@ -2,9 +2,12 @@
 export default {
   content: [
     "./index.html",
-    "./src/css/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container:{
+      center:true,
+    },
     extend: {},
   },
   plugins: [],

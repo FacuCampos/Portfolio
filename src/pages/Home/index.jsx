@@ -1,10 +1,11 @@
-import { Acerca, Contacto, Intro, Layout, Proyectos } from "../../components";
+import { Acerca, Contacto, Experiencia, Intro, Layout, Proyectos } from "../../components";
 
 const Home = () => {
   return (
     <Layout>
       <Intro/>
       <Acerca/>
+      <Experiencia/>
       <Proyectos/>
       <Contacto/>
     </Layout>
