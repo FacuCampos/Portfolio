@@ -25,11 +25,15 @@ a {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.7rem;
-  color: rgba(255, 255, 255, 0.8705882353);
+  color: rgba(255, 255, 255, 0.75);
   background-color: #242424;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+strong {
+  color: #ffffff;
 }
 
 .mainClass {
@@ -63,7 +67,7 @@ h3 {
   font-weight: 400;
   font-size: 2rem;
   line-height: 2.5rem;
-  margin: 20px 0 10px 0;
+  margin: 40px 0 10px 0;
   text-align: center;
 }
 
@@ -76,38 +80,36 @@ h4 {
   text-align: center;
 }
 
+ul {
+  list-style: disc;
+  margin: 0 0 0 20px;
+}
+
+li {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .separador {
   margin: 0;
   border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5058823529) 50%, rgba(255, 255, 255, 0) 100%);
   border-image-slice: 1;
 }
 
-/* button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.separador2 {
+  width: 100%;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1254901961);
+  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1882352941) 25%, rgba(255, 255, 255, 0.1882352941) 75%, rgba(255, 255, 255, 0) 100%);
+  border-top: 0;
+  border-image-slice: 1;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
-  /*   button {
-    background-color: #f9f9f9;
-  } */
 }
 .mostrarMenu {
   --btnMenu: scale(1);
@@ -125,7 +127,7 @@ button:focus-visible {
   height: 80px;
   position: sticky;
   top: 0;
-  background-color: #ec3651;
+  background-color: #d11515;
   z-index: 9999;
 }
 .navegador .nav-top {
@@ -202,7 +204,7 @@ button:focus-visible {
   position: relative;
   background-color: rgba(217, 217, 217, 0.05);
   border: 1px solid transparent;
-  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.5058823529), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5058823529) 100%);
+  border-image-source: linear-gradient(45deg, rgba(236, 54, 81, 0.5058823529), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5058823529) 100%);
   border-image-slice: 1;
   width: 100%;
   aspect-ratio: 1/1;
@@ -230,6 +232,19 @@ button:focus-visible {
   line-height: 1rem;
 }
 
+.retrato {
+  margin: 0 0 15px 0;
+  padding: 4px;
+  border-radius: 100%;
+  width: 100%;
+  height: fit-content;
+  background-image: linear-gradient(60deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1254901961) 50%, rgba(255, 255, 255, 0.5058823529) 100%);
+  overflow: hidden;
+}
+.retrato img {
+  border-radius: 100%;
+}
+
 .tecs-contenedor {
   display: flex;
   flex-direction: column;
@@ -254,6 +269,45 @@ button:focus-visible {
 .cat-titulo .separadorTituloE {
   width: 10%;
   border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.5058823529), rgba(255, 255, 255, 0) 100%);
+  border-image-slice: 1;
+}
+
+.cert-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+.cert-contenedor .certificado {
+  position: relative;
+  padding: 10px;
+  background-color: rgba(217, 217, 217, 0.05);
+  border: 1px solid transparent;
+  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.5058823529), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5058823529) 100%);
+  border-image-slice: 1;
+  width: 100%;
+  text-align: center;
+}
+.cert-contenedor .certificado .certificado-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.cert-contenedor .certificado .certificado-contenido .cert-nombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.cert-contenedor .certificado p {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.cert-contenedor .certificado img {
+  border: 1px solid transparent;
+  border-image-source: linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5058823529) 50%, rgba(255, 255, 255, 0) 100%);
   border-image-slice: 1;
 }
 

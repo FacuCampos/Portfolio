@@ -99,37 +99,88 @@ const AcercaDe = () => {
       img: "vsc.svg",
       alt: "Icono de VSC",
     },
+    {
+      tipo: "backend",
+      nombre: "SQLite",
+      img: "sqlite.svg",
+      alt: "Icono de SQLite",
+    },
   ];
 
   const front = tecnologias.filter((el) => el.tipo == "frontend");
-
   const back = tecnologias.filter((el) => el.tipo == "backend");
-
   const software = tecnologias.filter((el) => el.tipo == "software");
+
+  const certificados = [
+    {
+      nombre: "Desarrollo frontend React",
+      img: "certificado_carrera_frontend.webp",
+      alt: "Certificado de Desarrollador frontend React",
+    },
+    {
+      nombre: "Desarrollo web",
+      img: "certificado_desarrollo_web.webp",
+      alt: "Certificado de desarrollo web",
+    },
+    {
+      nombre: "Javascript",
+      img: "certificado_javascript.webp",
+      alt: "Certificado de Javascript",
+    },
+    {
+      nombre: "React JS",
+      img: "certificado_react.webp",
+      alt: "Certificado de React JS",
+    },
+    {
+      nombre: "Python",
+      img: "certificado_python.webp",
+      alt: "Certificado de Python",
+    },
+    {
+      nombre: "PHP + MySQL",
+      img: "certificado_php.webp",
+      alt: "Certificado de PHP + MySQL",
+    },
+  ];
 
   return (
     <section className="sectionClass" id="acerca">
       <h2>Acerca de mí</h2>
-      <p>
-        Me llamo Facundo José Campos, tengo 25 años y vivo en la Ciudad Autónoma
-        de Buenos Aires, Argentina.
-      </p>
-      <p>
-        Soy un programador front-end especializado en React JS. Me gusta
-        aprender a utilizar nuevas tecnologias, por lo que sigo desarrollome
-        constantemente.
-      </p>
-      <p>
-        Empecé la carrera de ingenieria industrial al salir del secundario, pero
-        al cabo de unos años me di cuenta que no era lo que me interesaba. Allí
-        tuve un cuatrimestre con introducción a la programación, materia que me
-        encantó y me di cuenta que era lo que realmente me apasionaba. Por eso
-        en 2022 decidí cambiar de rumbo definitivamente.
-      </p>
-      <p>
-        Estoy abierto a oportunidades laborales donde pueda contribuir, aprender
-        y crecer profesionalmente.
-      </p>
+      <div className="retrato">
+        <img src="/img/retrato.jpg" alt="Mi foto" />
+      </div>
+      <ul>
+        <li>
+          <p>
+            Me llamo <strong>Facundo José Campos</strong>, tengo 25 años y vivo en la Ciudad
+            Autónoma de Buenos Aires, Argentina.
+          </p>
+        </li>
+        <li>
+          <p>
+            Soy un strong <strong>programador front-end especializado en React JS</strong>. Me gusta
+            aprender a utilizar nuevas tecnologias, por lo que sigo desarrollome
+            constantemente.
+          </p>
+        </li>
+        <li>
+          <p>
+            Empecé la carrera de ingenieria industrial al salir del secundario,
+            pero al cabo de unos años me di cuenta que no era lo que me
+            interesaba. Allí tuve un cuatrimestre con introducción a la
+            programación, materia que me encantó y me di cuenta que era lo que
+            realmente me apasionaba. Por eso en 2022 decidí cambiar de rumbo
+            definitivamente.
+          </p>
+        </li>
+        <li>
+          <p>
+            Estoy <strong>abierto a oportunidades laborales</strong> donde pueda contribuir,
+            aprender y crecer profesionalmente.
+          </p>
+        </li>
+      </ul>
 
       <div className="tecnologias">
         <h3>Tecnologías</h3>
@@ -178,7 +229,22 @@ const AcercaDe = () => {
       <div className="certificaciones">
         <h3>Certificaciones</h3>
         <hr className="separador" />
-
+        <div className="cert-contenedor">
+          {certificados &&
+            certificados.map((el, index) => (
+              <div className="certificado" key={`certificado${index}`}>
+                <div className="certificado-contenido">
+                  <div className="cert-nombre">
+                    <p>{el.nombre}</p>
+                    <hr className="separador2" />
+                  </div>
+                  <a href={`/img/certificaciones/${el.img}`} target="_blank">
+                    <img src={`/img/certificaciones/${el.img}`} alt={el.alt} />
+                  </a>
+                </div>
+              </div>
+            ))}
+        </div>
       </div>
     </section>
   );
