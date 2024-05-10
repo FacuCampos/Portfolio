@@ -23,7 +23,7 @@ a {
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.7rem;
   color: rgba(255, 255, 255, 0.8705882353);
   background-color: #242424;
@@ -58,6 +58,30 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin: 20px 0 10px 0;
+  text-align: center;
+}
+
+h4 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.separador {
+  margin: 0;
+  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5058823529) 50%, rgba(255, 255, 255, 0) 100%);
+  border-image-slice: 1;
+}
+
 /* button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -82,8 +106,8 @@ button:focus-visible {
     background-color: #ffffff;
   }
   /*   button {
-      background-color: #f9f9f9;
-    } */
+    background-color: #f9f9f9;
+  } */
 }
 .mostrarMenu {
   --btnMenu: scale(1);
@@ -161,6 +185,76 @@ button:focus-visible {
 }
 .navegador .nav-dropdown .nav-link .nav-link-div .nav-link-icon {
   width: 1.5rem;
+}
+
+.tecnologias {
+  position: relative;
+  width: 100%;
+}
+.tecnologias .tec-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  width: 100%;
+}
+.tecnologias .tec-list .tec-card {
+  position: relative;
+  background-color: rgba(217, 217, 217, 0.05);
+  border: 1px solid transparent;
+  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.5058823529), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5058823529) 100%);
+  border-image-slice: 1;
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.tecnologias .tec-list .tec-card div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.tecnologias .tec-list .tec-card img {
+  position: relative;
+  width: 45%;
+  height: auto;
+  object-fit: cover;
+}
+.tecnologias .tec-list .tec-card p {
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.tecs-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cat-titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.cat-titulo h4 {
+  width: max-content;
+}
+.cat-titulo .separadorTituloS {
+  width: 10%;
+  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5058823529) 100%);
+  border-image-slice: 1;
+}
+.cat-titulo .separadorTituloE {
+  width: 10%;
+  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.5058823529), rgba(255, 255, 255, 0) 100%);
+  border-image-slice: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

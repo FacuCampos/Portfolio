@@ -1,6 +1,7 @@
 export { default as Layout } from './Layout';
 
 export { default as Navbar } from './Navbar';
+export { default as TecCard } from './TecCard';
 
 export { default as Intro } from './Introduccion';
 export { default as Acerca } from './AcercaDe';
