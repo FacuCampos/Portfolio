@@ -1,0 +1,110 @@
+[
+  {
+    "tipo": "frontend",
+    "nombre": "HTML 5",
+    "img": "html-5.svg",
+    "alt": "Icono de HTML"
+  },
+  {
+    "tipo": "frontend",
+    "nombre": "CSS 3",
+    "img": "css.svg",
+    "alt": "Icono de CSS"
+  },
+  {
+    "tipo": "frontend",
+    "nombre": "Javascript",
+    "img": "javascript.svg",
+    "alt": "Icono de Javascript"
+  },
+  {
+    "tipo": "frontend",
+    "nombre": "React JS",
+    "img": "react.svg",
+    "alt": "Icono de React"
+  },
+  {
+    "tipo": "backend",
+    "nombre": "Python",
+    "img": "python.svg",
+    "alt": "Icono de Python"
+  },
+  {
+    "tipo": "backend",
+    "nombre": "Django",
+    "img": "django.svg",
+    "alt": "Icono de Django"
+  },
+  {
+    "tipo": "backend",
+    "nombre": "PHP",
+    "img": "php.svg",
+    "alt": "Icono de PHP"
+  },
+  {
+    "tipo": "backend",
+    "nombre": "Laravel",
+    "img": "laravel.svg",
+    "alt": "Icono de Laravel"
+  },
+  {
+    "tipo": "frontend",
+    "nombre": "Sass",
+    "img": "sass.svg",
+    "alt": "Icono de Sass"
+  },
+  {
+    "tipo": "frontend",
+    "nombre": "Bootstrap",
+    "img": "bootstrap.svg",
+    "alt": "Icono de Bootstrap"
+  },
+  {
+    "tipo": "frontend",
+    "nombre": "Tailwind",
+    "img": "tailwind.svg",
+    "alt": "Icono de Tailwind"
+  },
+  {
+    "tipo": "backend",
+    "nombre": "MySQL",
+    "img": "mysql.svg",
+    "alt": "Icono de MySQL"
+  },
+  {
+    "tipo": "software",
+    "nombre": "Figma",
+    "img": "figma.svg",
+    "alt": "Icono de Figma"
+  },
+  {
+    "tipo": "backend",
+    "nombre": "Git",
+    "img": "git.svg",
+    "alt": "Icono de Git"
+  },
+  {
+    "tipo": "software",
+    "nombre": "Github",
+    "img": "github.svg",
+    "alt": "Icono de Github"
+  },
+  {
+    "tipo": "backend",
+    "nombre": "Node JS",
+    "img": "nodejs.svg",
+    "alt": "Icono de Node JS"
+  },
+  {
+    "tipo": "software",
+    "nombre": "Visual Studio",
+    "img": "vsc.svg",
+    "alt": "Icono de VSC"
+  },
+  {
+    "tipo": "backend",
+    "nombre": "SQLite",
+    "img": "sqlite.svg",
+    "alt": "Icono de SQLite"
+  }
+]

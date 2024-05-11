@@ -1,0 +1,32 @@
+[
+    {
+      "nombre": "Desarrollo frontend React",
+      "img": "certificado_carrera_frontend.webp",
+      "alt": "Certificado de Desarrollador frontend React"
+    },
+    {
+      "nombre": "Desarrollo web",
+      "img": "certificado_desarrollo_web.webp",
+      "alt": "Certificado de desarrollo web"
+    },
+    {
+      "nombre": "Javascript",
+      "img": "certificado_javascript.webp",
+      "alt": "Certificado de Javascript"
+    },
+    {
+      "nombre": "React JS",
+      "img": "certificado_react.webp",
+      "alt": "Certificado de React JS"
+    },
+    {
+      "nombre": "Python",
+      "img": "certificado_python.webp",
+      "alt": "Certificado de Python"
+    },
+    {
+      "nombre": "PHP + MySQL",
+      "img": "certificado_php.webp",
+      "alt": "Certificado de PHP + MySQL"
+    }
+  ]
