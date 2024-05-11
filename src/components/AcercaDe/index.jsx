@@ -188,9 +188,9 @@ const AcercaDe = () => {
         <div className="tecs-contenedor">
           <div className="tecs-front">
             <div className="cat-titulo">
-              <hr className="separadorTituloS" />
+              <hr className="separadorTituloL" />
               <h4>Front-end</h4>
-              <hr className="separadorTituloE" />
+              <hr className="separadorTituloR" />
             </div>
             <div className="tec-list">
               {front &&
@@ -201,9 +201,9 @@ const AcercaDe = () => {
           </div>
           <div className="tecs-back">
             <div className="cat-titulo">
-              <hr className="separadorTituloS" />
+              <hr className="separadorTituloL" />
               <h4>Back-end</h4>
-              <hr className="separadorTituloE" />
+              <hr className="separadorTituloR" />
             </div>
             <div className="tec-list">
               {back &&
@@ -212,9 +212,9 @@ const AcercaDe = () => {
           </div>
           <div className="tecs-software">
             <div className="cat-titulo">
-              <hr className="separadorTituloS" />
+              <hr className="separadorTituloL" />
               <h4>Software</h4>
-              <hr className="separadorTituloE" />
+              <hr className="separadorTituloR" />
             </div>
             <div className="tec-list">
               {software &&
