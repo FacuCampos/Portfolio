@@ -17,8 +17,7 @@ const Certificaciones = () => {
       verMas &&
       animateScroll.scrollTo(posicion - 140, {
         smooth: true,
-        duration: 500,
-        offset: 0,
+        duration: 900,
       });
   };
 
