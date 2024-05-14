@@ -102,12 +102,71 @@ li {
   border-top: 0;
 }
 
+.mostrarRows {
+  --rows: 1fr;
+  --espacio: 20px;
+}
+.mostrarRows .iconRotateX svg {
+  transform: rotateX(180deg);
+}
+
+.boton1, .cert-boton {
+  background-color: #636363;
+  padding: 5px 15px;
+  box-shadow: 0 6px 20px 0 rgba(74, 74, 74, 0.4117647059);
+  border-radius: 4px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
 }
+.retrato {
+  width: 75%;
+  height: fit-content;
+  margin: 0 auto 15px auto;
+  padding: 4px;
+  border-radius: 100%;
+  background-image: linear-gradient(60deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1254901961) 50%, rgba(255, 255, 255, 0.5058823529) 100%);
+  overflow: hidden;
+}
+.retrato img {
+  border-radius: 100%;
+}
+
+.tecs-contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  align-items: auto;
+  gap: 20px;
+}
+
+.cat-titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.cat-titulo h4 {
+  width: max-content;
+}
+.cat-titulo .separadorTituloL {
+  border: auto;
+  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5058823529) 100%);
+  border-image-slice: 1;
+  width: 10%;
+}
+.cat-titulo .separadorTituloR {
+  border: auto;
+  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.5058823529), rgba(255, 255, 255, 0) 100%);
+  border-image-slice: 1;
+  width: 10%;
+}
+
 .mostrarMenu {
   --btnMenu: scale(1);
   --btnCruz: scale(0) rotate(-90deg);
@@ -217,7 +276,7 @@ li {
   border: 1px solid transparent;
   border-image-source: linear-gradient(45deg, rgba(209, 21, 21, 0.7), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5058823529) 100%);
   border-image-slice: 1;
-  box-shadow: 0 6px 20px 0 rgba(77, 77, 77, 0.2);
+  box-shadow: 0 6px 20px 0 rgba(74, 74, 74, 0.4117647059);
 }
 .tecnologias .tec-list .tec-card div {
   display: flex;
@@ -239,59 +298,43 @@ li {
   line-height: 1rem;
 }
 
-.retrato {
-  width: 75%;
-  height: fit-content;
-  margin: 0 auto 15px auto;
-  padding: 4px;
-  border-radius: 100%;
-  background-image: linear-gradient(60deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1254901961) 50%, rgba(255, 255, 255, 0.5058823529) 100%);
+.certDropdown {
+  display: grid;
+  grid-template-rows: var(--rows, 0fr);
+  transition: 1s grid-template-rows;
+}
+.certDropdown .certDropdownDiv {
+  display: grid;
+  gap: 20px;
   overflow: hidden;
 }
-.retrato img {
-  border-radius: 100%;
-}
 
-.tecs-contenedor {
+.certificaciones-contenedor {
   display: flex;
   flex-direction: column;
-  justify-content: auto;
-  align-items: auto;
-  gap: 20px;
-}
-
-.cat-titulo {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-}
-.cat-titulo h4 {
-  width: max-content;
-}
-.cat-titulo .separadorTituloL {
-  border: auto;
-  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5058823529) 100%);
-  border-image-slice: 1;
-  width: 10%;
-}
-.cat-titulo .separadorTituloR {
-  border: auto;
-  border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.5058823529), rgba(255, 255, 255, 0) 100%);
-  border-image-slice: 1;
-  width: 10%;
+  gap: var(--espacio, 10px);
+  width: 100%;
 }
 
-.cert-contenedor {
+.cert-boton {
+  width: 120px;
   display: flex;
-  flex-direction: column;
-  justify-content: auto;
-  align-items: auto;
-  gap: 20px;
-  margin-top: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
 }
-.cert-contenedor .certificado {
+.cert-boton svg {
+  width: 1rem;
+  position: relative;
+  left: 0.1rem;
+  top: 0.05rem;
+  transition: all 0.5s;
+}
+
+.certificado {
   position: relative;
   border: 1px solid transparent;
   border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.5058823529), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5058823529) 100%);
@@ -301,27 +344,27 @@ li {
   padding: 10px;
   text-align: center;
 }
-.cert-contenedor .certificado .certificado-contenido {
+.certificado .certificado-contenido {
   display: flex;
   flex-direction: column;
   justify-content: auto;
   align-items: auto;
   gap: 15px;
 }
-.cert-contenedor .certificado .certificado-contenido .cert-nombre {
+.certificado .certificado-contenido .cert-nombre {
   display: flex;
   flex-direction: column;
   justify-content: auto;
   align-items: center;
   gap: 5px;
 }
-.cert-contenedor .certificado p {
+.certificado p {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
   line-height: 2rem;
 }
-.cert-contenedor .certificado img {
+.certificado img {
   border: 1px solid transparent;
   border-image-source: linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5058823529) 50%, rgba(255, 255, 255, 0) 100%);
   border-image-slice: 1;

@@ -1,8 +1,7 @@
-import { TecCard } from "../../components";
-import { tecnologias, certificados } from "../../data"
+import { Certificaciones, TecCard } from "../../components";
+import { tecnologias } from "../../data";
 
 const AcercaDe = () => {
-
   const front = tecnologias.filter((el) => el.tipo == "frontend");
   const back = tecnologias.filter((el) => el.tipo == "backend");
   const software = tecnologias.filter((el) => el.tipo == "software");
@@ -16,15 +15,16 @@ const AcercaDe = () => {
       <ul>
         <li>
           <p>
-            Me llamo <strong>Facundo José Campos</strong>, tengo 25 años y vivo en la Ciudad
-            Autónoma de Buenos Aires, Argentina.
+            Me llamo <strong>Facundo José Campos</strong>, tengo 25 años y vivo
+            en la Ciudad Autónoma de Buenos Aires, Argentina.
           </p>
         </li>
         <li>
           <p>
-            Soy un strong <strong>programador front-end especializado en React JS</strong>. Me gusta
-            aprender a utilizar nuevas tecnologias, por lo que sigo desarrollome
-            constantemente.
+            Soy un strong{" "}
+            <strong>programador front-end especializado en React JS</strong>. Me
+            gusta aprender a utilizar nuevas tecnologias, por lo que sigo
+            desarrollome constantemente.
           </p>
         </li>
         <li>
@@ -39,8 +39,8 @@ const AcercaDe = () => {
         </li>
         <li>
           <p>
-            Estoy <strong>abierto a oportunidades laborales</strong> donde pueda contribuir,
-            aprender y crecer profesionalmente.
+            Estoy <strong>abierto a oportunidades laborales</strong> donde pueda
+            contribuir, aprender y crecer profesionalmente.
           </p>
         </li>
       </ul>
@@ -89,25 +89,10 @@ const AcercaDe = () => {
         </div>
       </div>
 
-      <div className="certificaciones">
+      <div className="certificaciones" id="certificaciones">
         <h3>Certificaciones</h3>
         <hr className="separador" />
-        <div className="cert-contenedor">
-          {certificados &&
-            certificados.map((el, index) => (
-              <div className="certificado" key={`certificado${index}`}>
-                <div className="certificado-contenido">
-                  <div className="cert-nombre">
-                    <p>{el.nombre}</p>
-                    <hr className="separador2" />
-                  </div>
-                  <a href={`/img/certificaciones/${el.img}`} target="_blank">
-                    <img src={`/img/certificaciones/${el.img}`} alt={el.alt} />
-                  </a>
-                </div>
-              </div>
-            ))}
-        </div>
+        <Certificaciones />
       </div>
     </section>
   );
