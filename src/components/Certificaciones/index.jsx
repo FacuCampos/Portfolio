@@ -26,7 +26,7 @@ const Certificaciones = () => {
     verMas ? setBoton({ texto: "Ocultar" }) : setBoton({ texto: "Ver todos" });
 
     const certDropdown = document.querySelector(".certificaciones-contenedor");
-    certDropdown.classList.toggle("mostrarRows");
+    verMas && certDropdown.classList.toggle("mostrarRows");
   }, [verMas]);
 
   return (
