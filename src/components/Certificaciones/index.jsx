@@ -17,17 +17,17 @@ const Certificaciones = () => {
       verMas &&
       animateScroll.scrollTo(posicion - 140, {
         smooth: true,
-        duration: 900,
+        duration: 700,
         offset: 0,
       });
-    const certDropdown = document.querySelector(".certificaciones-contenedor");
-    verMas
-      ? certDropdown.classList.remove("mostrarRows")
-      : certDropdown.classList.add("mostrarRows");
   };
 
   useEffect(() => {
     verMas ? setBoton({ texto: "Ocultar" }) : setBoton({ texto: "Ver todos" });
+    const certDropdown = document.querySelector(".certificaciones-contenedor");
+    verMas
+      ? certDropdown.classList.add("mostrarRows")
+      : certDropdown.classList.remove("mostrarRows");
   }, [verMas]);
 
   return (

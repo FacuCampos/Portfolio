@@ -7,10 +7,14 @@ import {
   XMarkIcon,
   BriefcaseIcon,
 } from "@heroicons/react/24/outline";
+import { useRef } from "react";
 
 function handleNav() {
   const fondoBlur = document.querySelector(".mainClass");
-  fondoBlur.classList.toggle("blur");
+  
+  const windowWidth = useRef(window.innerWidth);
+
+  windowWidth < 920 && fondoBlur.classList.toggle("blur");
 
   const topDiv = document.querySelector(".navegador");
   topDiv.classList.toggle("mostrarMenu");

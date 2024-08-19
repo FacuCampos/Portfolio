@@ -1,0 +1,27 @@
+[
+    {
+        "titulo": "Proyecto 1",
+        "img": "arkhamStore.png",
+        "url": "link al projecto",
+        "descripcion": "breve descripcion",
+        "tecnologias": [
+            "bootstrap",
+            "css",
+            "git",
+            "html",
+            "javascript",
+            "react",
+            "nodejs",
+            "sass"
+        ]
+    },
+    {
+        "titulo": "Proyecto 2",
+        "img": "",
+        "url": "link al projecto",
+        "descripcion": "breve descripcion",
+        "tecnologias":[
+
+        ]
+    }
+]
