@@ -7,8 +7,25 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline";
 const Certificaciones = () => {
   const [verMas, setVerMas] = useState(false);
   const [boton, setBoton] = useState({ texto: "Ver todos" });
+  const [desktop, setDesktop] = useState(false);
 
   const ref = useRef(null);
+
+  function handleResize() {
+    const { innerWidth: windowWidth } = window;
+    setDesktop(windowWidth >= 992);
+  }
+
+  useEffect(() => {
+    const { innerWidth: windowWidth } = window;
+    setDesktop(windowWidth >= 992);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const buttonHandler = () => {
     setVerMas(!verMas);
@@ -32,19 +49,31 @@ const Certificaciones = () => {
 
   return (
     <div className="certificaciones-contenedor" ref={ref}>
-      <div className="primer-cert">
-        <Certificado key={"certificado1"} data={certificados[0]} />
-      </div>
+      {desktop ? (
+        <div className="primer-cert">
+          {certificados &&
+            certificados
+              .slice(1,4)
+              .map((el, index) => (
+                <Certificado key={`certificado${index + 1}`} data={el} />
+              ))}
+        </div>
+      ) : (
+        <div className="primer-cert">
+          <Certificado key={"certificado1"} data={certificados[0]} />
+        </div>
+      )}
       <div className="certDropdown">
         <div className="certDropdownDiv">
           {certificados &&
             certificados
-              .slice(1)
+              .slice(4)
               .map((el, index) => (
                 <Certificado key={`certificado${index + 1}`} data={el} />
               ))}
         </div>
       </div>
+      <hr className="separador"/>
       <button onClick={buttonHandler} className="cert-boton iconRotateX">
         <p>{boton.texto}</p>
         <ChevronDownIcon />

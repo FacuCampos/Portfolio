@@ -7,38 +7,40 @@ import {
   XMarkIcon,
   BriefcaseIcon,
 } from "@heroicons/react/24/outline";
-import { useRef } from "react";
-
-function handleNav() {
-  const fondoBlur = document.querySelector(".mainClass");
-  
-  const windowWidth = useRef(window.innerWidth);
-
-  windowWidth < 920 && fondoBlur.classList.toggle("blur");
-
-  const topDiv = document.querySelector(".navegador");
-  topDiv.classList.toggle("mostrarMenu");
-  topDiv.classList.toggle("mostrarCruz");
-}
-
-function handleScroll(elem) {
-  const nav = document.getElementById("navbar");
-  const target = document.querySelector(elem);
-
-  if (nav){
-    const targetRect = target.getBoundingClientRect();
-    const navHeight = nav.offsetHeight;
-    const offset = targetRect.top - navHeight;
-
-    window.scrollBy({ top: offset, behavior: "smooth" });
-  } else {
-    window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
-  }
-
-  handleNav()
-}
 
 const Navbar = () => {
+  
+  function handleNav() {
+    const windowWidth = window.innerWidth;
+    const fondoBlur = document.querySelector(".mainClass");
+    console.log(windowWidth)
+
+    if (windowWidth < 920) {
+      fondoBlur.classList.toggle("blur");
+    }
+
+    const topDiv = document.querySelector(".navegador");
+    topDiv.classList.toggle("mostrarMenu");
+    topDiv.classList.toggle("mostrarCruz");
+  }
+
+  function handleScroll(elem) {
+    const nav = document.getElementById("navbar");
+    const target = document.querySelector(elem);
+
+    if (nav) {
+      const targetRect = target.getBoundingClientRect();
+      const navHeight = nav.offsetHeight;
+      const offset = targetRect.top - navHeight;
+
+      window.scrollBy({ top: offset, behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: target.offsetTop, behavior: "smooth" });
+    }
+
+    handleNav();
+  }
+
   return (
     <nav id="navbar" className="navegador mostrarMenu">
       <div className="nav-top">

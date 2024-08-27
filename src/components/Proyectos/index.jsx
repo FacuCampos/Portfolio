@@ -1,16 +1,15 @@
 import {proyectos} from "../../data";
-import {Proyecto} from "../../components";
+import {Proyecto, Seccion} from "../../components";
 
 const Proyectos = () => {
   return (
-    <section className="sectionClass" id="proyectos">
-      <h2>Proyectos</h2>
+    <Seccion titulo="Proyectos" seccion="1" id="proyectos">
       <div className="proyectos-contenedor">
         {
           proyectos && proyectos.map((el, index) => <Proyecto key={`proyecto${index}`} datos={el}/>)
         }
       </div>
-    </section>
+    </Seccion>
   )
 }
 

@@ -24,6 +24,12 @@
     "alt": "Icono de React"
   },
   {
+    "tipo": "mobile",
+    "nombre": "React Native",
+    "img": "react.svg",
+    "alt": "Icono de React"
+  },
+  {
     "tipo": "backend",
     "nombre": "Python",
     "img": "python.svg",
@@ -67,18 +73,6 @@
   },
   {
     "tipo": "backend",
-    "nombre": "MySQL",
-    "img": "mysql.svg",
-    "alt": "Icono de MySQL"
-  },
-  {
-    "tipo": "software",
-    "nombre": "Figma",
-    "img": "figma.svg",
-    "alt": "Icono de Figma"
-  },
-  {
-    "tipo": "backend",
     "nombre": "Git",
     "img": "git.svg",
     "alt": "Icono de Git"
@@ -90,16 +84,40 @@
     "alt": "Icono de Github"
   },
   {
+    "tipo": "software",
+    "nombre": "Vite",
+    "img": "vite.svg",
+    "alt": "Icono de Vite"
+  },
+  {
     "tipo": "backend",
     "nombre": "Node JS",
     "img": "nodejs.svg",
     "alt": "Icono de Node JS"
   },
   {
+    "tipo": "backend",
+    "nombre": "MySQL",
+    "img": "mysql.svg",
+    "alt": "Icono de MySQL"
+  },
+  {
     "tipo": "software",
     "nombre": "Visual Studio",
     "img": "vsc.svg",
     "alt": "Icono de VSC"
+  },
+  {
+    "tipo": "design",
+    "nombre": "Figma",
+    "img": "figma.svg",
+    "alt": "Icono de Figma"
+  },
+  {
+    "tipo": "software",
+    "nombre": "Jekyll",
+    "img": "jekyll.svg",
+    "alt": "Icono de Jekyll"
   },
   {
     "tipo": "backend",

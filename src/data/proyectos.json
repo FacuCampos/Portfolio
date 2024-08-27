@@ -1,27 +1,34 @@
 [
     {
-        "titulo": "Proyecto 1",
+        "titulo": "Arkham Store",
         "img": "arkhamStore.png",
-        "url": "link al projecto",
-        "descripcion": "breve descripcion",
+        "url": "https://entrega-final-campos.vercel.app/",
+        "repositorio": "https://github.com/FacuCampos/React-EntregaFinal-Campos",
+        "descripcion": "Este proyecto fue mi trabajo final en el curso de React. Consiste en un ecommerce ficticio que simula una tienda de juegos de mesa. Ofrece una experiencia completa, simulando un proceso de compra.",
         "tecnologias": [
-            "bootstrap",
-            "css",
-            "git",
-            "html",
-            "javascript",
-            "react",
-            "nodejs",
-            "sass"
+            "Bootstrap",
+            "CSS",
+            "Git",
+            "HTML",
+            "Javascript",
+            "React",
+            "NodeJS",
+            "Sass",
+            "Vite"
         ]
     },
     {
-        "titulo": "Proyecto 2",
-        "img": "",
-        "url": "link al projecto",
-        "descripcion": "breve descripcion",
+        "titulo": "Bitcoin Cash Academy",
+        "img": "bchAcademy.png",
+        "url":"https://bch.education/",
+        "descripcion": "Participé en calidad de diseñador y desarrollador web en el desarrollo de este proyecto. El sitio está orientado a proporcionar información detallada sobre Bitcoin Cash. Ha sido creado con el propósito de ofrecer un recurso integral para comprender los aspectos fundamentales y las características de esta criptomoneda.",
         "tecnologias":[
-
+            "Bootstrap",
+            "HTML",
+            "CSS",
+            "Git",
+            "Jekyll",
+            "Sass"
         ]
     }
 ]

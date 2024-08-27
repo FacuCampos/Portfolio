@@ -7,6 +7,7 @@ import {
   Github,
   Html,
   Javascript,
+  Jekyll,
   Laravel,
   Mysql,
   Nodejs,
@@ -17,11 +18,12 @@ import {
   Sqlite,
   Tailwind,
   VisualStudio,
+  Vite,
 } from "../TecIconos";
 import { Github as GithubRBI, Link } from "react-bootstrap-icons";
 
 const Proyecto = ({ datos }) => {
-  const { titulo, img, url, descripcion, tecnologias } = datos;
+  const { titulo, img, url, repositorio, descripcion, tecnologias } = datos;
 
   const imagen = img !== "" ? img : "default.png";
 
@@ -81,35 +83,65 @@ const Proyecto = ({ datos }) => {
       case "vsc":
         return <VisualStudio />;
 
+      case "jekyll":
+        return <Jekyll />;
+
+      case "vite":
+        return <Vite />;
+
       default:
         break;
     }
   };
 
   return (
-    <div href={url} className="proyectoCard">
-      <img src={`img/proyectos/${imagen}`} alt={titulo} />
+    <div className="proyectoCard">
+      <div className="proyectoImg">
+        <img src={`img/proyectos/${imagen}`} alt={titulo} />
+      </div>
       <div className="proyectoCardInfo">
-        <h4>{titulo}</h4>
+        <h3>{titulo}</h3>
         <hr />
         <p>{descripcion}</p>
-        <h5>Tecnologias usadas</h5>
+        <h5>Tecnologias utilizadas</h5>
         <hr />
         <div className="tecsUsadas">
-          {
-            tecnologias && tecnologias.map((el) => iconoTec(el))
-          }
+          {tecnologias &&
+            tecnologias.map((el, idx) => {
+              return (
+                <div
+                  title={el.slice(0, 1).toUpperCase() + el.slice(1)}
+                  key={`tec-${idx}`}
+                >
+                  {iconoTec(el.toLowerCase())}
+                </div>
+              );
+            })}
         </div>
-        <h5>Repositorio</h5>
-        <hr />
-        <a href={"#"} className="proyectoLink">
-          <GithubRBI />
-        </a>
-        <h5>Visitar</h5>
-        <hr />
-        <a href={"#"} className="proyectoLink">
-          <Link />
-        </a>
+        <div className="proyectoEnlaces">
+          {repositorio && (
+            <a
+              href={repositorio}
+              target="_blank"
+              title="Repositorio"
+              className="proyectoLink positionLeft"
+            >
+              <GithubRBI />
+              <p>Ver código</p>
+            </a>
+          )}
+          {url && (
+            <a
+              href={url}
+              target="_blank"
+              title="Ir al sitio"
+              className="proyectoLink positionRight"
+            >
+              <Link />
+              <p>Visitar</p>
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
