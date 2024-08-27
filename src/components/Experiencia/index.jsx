@@ -9,7 +9,7 @@ const Experiencia = () => {
       seccion="2"
       id="experiencia"
     >
-      <ul>
+      <ul className="listaExperiencia">
         {experiencia &&
           experiencia.map((el, index) => {
             return (

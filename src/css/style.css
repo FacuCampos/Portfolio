@@ -68,7 +68,7 @@ h3 {
   font-weight: 400;
   font-size: 2rem;
   line-height: 2.5rem;
-  margin: 100px 0 0 0;
+  margin: 60px 0 0 0;
   text-align: center;
 }
 
@@ -77,7 +77,7 @@ h4 {
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 2rem;
-  margin: 15px 0;
+  margin: 30px 0 15px 0;
   text-align: center;
 }
 
@@ -105,6 +105,7 @@ li {
   border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5058823529) 50%, rgba(255, 255, 255, 0) 100%);
   border-image-slice: 1;
   width: 100%;
+  margin: 10px 0 0px 0;
 }
 
 .separador2 {
@@ -144,6 +145,27 @@ li {
     background-color: #ffffff;
   }
 }
+@media (width >= 992px) {
+  h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 100px 0 0 0;
+    text-align: center;
+  }
+  h4 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 15px 0;
+    text-align: center;
+  }
+  .separador {
+    margin: 0;
+  }
+}
 .mostrarRows {
   --rows: 1fr;
   --espacio: 20px;
@@ -170,7 +192,7 @@ li {
   align-items: center;
   gap: var(--espacio, 10px);
   width: 100%;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .cert-boton {
@@ -179,7 +201,7 @@ li {
   justify-content: center;
   align-items: center;
   gap: 0;
-  margin-top: 25px;
+  margin-top: 15px;
   position: relative;
   padding: 10px 20px;
   width: 200px;
@@ -252,6 +274,7 @@ li {
   }
   .cert-boton {
     cursor: pointer;
+    margin-top: 25px;
   }
   .cert-boton:focus {
     outline: none;
@@ -539,28 +562,32 @@ footer ul svg {
 .proyectoCard .proyectoImg {
   overflow: hidden;
   width: 100%;
-  height: 300px;
+  height: 200px;
 }
 .proyectoCard img {
-  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .proyectoCard .proyectoCardInfo {
   padding: 15px;
+}
+.proyectoCard .proyectoCardInfo p {
+  font-size: 1.2rem;
+  text-align: justify;
 }
 .proyectoCard .proyectoCardInfo h3 {
   text-align: left;
   margin: 0;
 }
 .proyectoCard .proyectoCardInfo h5 {
+  font-size: 1.8rem;
   text-align: left;
-  margin: 10px 0 5px 0;
+  margin: 20px 0 5px 0;
 }
 .proyectoCard .proyectoCardInfo hr {
   border: auto;
   border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.5058823529), rgba(255, 255, 255, 0) 100%);
   border-image-slice: 1;
-  margin-bottom: 10px;
 }
 .proyectoCard .proyectoCardInfo .tecsUsadas {
   display: flex;
@@ -569,6 +596,7 @@ footer ul svg {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+  margin: 15px 0 20px 0;
 }
 .proyectoCard .proyectoCardInfo .tecsUsadas svg {
   fill: rgba(255, 255, 255, 0.7490196078);
@@ -588,8 +616,7 @@ footer ul svg {
   right: 0;
   width: fit-content;
   padding: 10px 15px;
-  background-size: 300% 100%;
-  background-image: linear-gradient(to right, #636363, #878383, #cb1616);
+  background-color: #636363;
   box-shadow: 0 6px 20px 0 rgba(100, 100, 100, 0.3411764706);
   transition: all 0.3s ease-in-out;
 }
@@ -601,12 +628,24 @@ footer ul svg {
 .proyectoCard .proyectoEnlaces .proyectoLink p {
   font-size: 1.2rem;
 }
+.proyectoCard .proyectoEnlaces .proyectoLink:active {
+  background-color: #878383;
+  box-shadow: 0 6px 20px 0 rgba(74, 74, 74, 0.4117647059);
+}
 
 @media (width >= 992px) {
   .proyectoCard {
     transition: transform 0.5s;
   }
+  .proyectoCard .proyectoImg {
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+  }
   .proyectoCard img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
     transition: all 0.5s;
   }
   .proyectoCard .proyectoCardInfo {
@@ -617,12 +656,21 @@ footer ul svg {
   }
   .proyectoCard .proyectoCardInfo p {
     font-size: 1.2rem;
+    text-align: left;
   }
   .proyectoCard .proyectoCardInfo h5 {
+    font-size: 1.3rem;
     margin: 25px 0 5px 0;
+  }
+  .proyectoCard .proyectoCardInfo hr {
+    margin-bottom: 10px;
   }
   .proyectoCard .proyectoCardInfo .tecsUsadas {
     margin: 15px 0 25px 0;
+  }
+  .proyectoCard .proyectoEnlaces .proyectoLink {
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, #636363, #878383, #cb1616);
   }
   .proyectoCard .proyectoEnlaces .proyectoLink:hover {
     background-position: 100% 0;
@@ -630,6 +678,10 @@ footer ul svg {
   }
   .proyectoCard .proyectoEnlaces .proyectoLink:focus {
     outline: none;
+  }
+  .proyectoCard .proyectoEnlaces .proyectoLink:active {
+    background-color: auto;
+    background-image: linear-gradient(to right, #636363, #878383, #cb1616);
   }
   .proyectoCard:hover {
     transform: translate(0, -5px);
@@ -848,10 +900,13 @@ footer ul svg {
   justify-content: start;
   align-items: start;
   gap: 15px;
+  width: calc(100% - 20px);
+}
+.acercaInfo ul li {
   width: 100%;
 }
 .acercaInfo ul li p {
-  text-align: start;
+  text-align: justify;
 }
 
 .tecs-contenedor {
@@ -877,12 +932,14 @@ footer ul svg {
   border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5058823529) 100%);
   border-image-slice: 1;
   width: 10%;
+  margin-top: 10px;
 }
 .cat-titulo .separadorTituloR {
   border: auto;
   border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.5058823529), rgba(255, 255, 255, 0) 100%);
   border-image-slice: 1;
   width: 10%;
+  margin-top: 10px;
 }
 
 @media (width >= 992px) {
@@ -912,14 +969,27 @@ footer ul svg {
   .cat-titulo {
     margin-top: 10px;
   }
+  .cat-titulo .separadorTituloL {
+    margin-top: 0px;
+  }
+  .cat-titulo .separadorTituloR {
+    margin-top: 0px;
+  }
 }
-#experiencia ul {
-  width: 90%;
+#experiencia .listaExperiencia {
+  position: relative;
+  width: 80%;
   margin: 0 auto;
+  top: -10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
 }
-#experiencia ul li {
+#experiencia .listaExperiencia li {
   width: 100%;
-  text-align: left;
+  text-align: justify;
   margin-left: 20px;
 }
 #experiencia li::marker {
@@ -927,17 +997,13 @@ footer ul svg {
 }
 
 @media (width >= 992px) {
-  #experiencia ul {
+  #experiencia .listaExperiencia {
     width: fit-content;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    gap: 20px;
   }
-  #experiencia ul li {
+  #experiencia .listaExperiencia li {
     width: fit-content;
+    text-align: left;
   }
 }
 .proyectos-contenedor {
@@ -945,11 +1011,16 @@ footer ul svg {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  gap: 20px;
+  gap: 40px;
 }
 
 @media (width >= 992px) {
   .proyectos-contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -971,6 +1042,11 @@ footer ul svg {
   align-items: start;
   gap: 15px;
   font-weight: 600;
+  width: 80%;
+}
+.contactBox .infoContacto h3 {
+  margin-top: 0;
+  align-self: center;
 }
 .contactBox .campoInfo {
   display: flex;
@@ -1006,10 +1082,15 @@ footer ul svg {
     gap: 50px;
   }
   .contactBox .infoContacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
     width: 100%;
   }
   .contactBox .infoContacto h3 {
-    margin-top: 0;
+    align-self: left;
   }
   .contactBox .campoMail {
     cursor: pointer;
