@@ -2,11 +2,9 @@ import { useEffect, useState, useRef } from "react";
 import { certificados } from "../../data";
 import { Certificado } from "../../components";
 import { animateScroll } from "react-scroll";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 const Certificaciones = () => {
   const [verMas, setVerMas] = useState(false);
-  const [boton, setBoton] = useState({ texto: "Ver todos" });
   const [desktop, setDesktop] = useState(false);
 
   const ref = useRef(null);
@@ -32,7 +30,7 @@ const Certificaciones = () => {
     const posicion = ref.current ? ref.current.offsetTop : 0;
     ref.current &&
       verMas &&
-      animateScroll.scrollTo(posicion - 140, {
+      animateScroll.scrollTo(desktop ? posicion + 450 : posicion + 500, {
         smooth: true,
         duration: 700,
         offset: 0,
@@ -40,7 +38,6 @@ const Certificaciones = () => {
   };
 
   useEffect(() => {
-    verMas ? setBoton({ texto: "Ocultar" }) : setBoton({ texto: "Ver todos" });
     const certDropdown = document.querySelector(".certificaciones-contenedor");
     verMas
       ? certDropdown.classList.add("mostrarRows")
@@ -73,10 +70,9 @@ const Certificaciones = () => {
               ))}
         </div>
       </div>
-      <hr className="separador"/>
-      <button onClick={buttonHandler} className="cert-boton iconRotateX">
-        <p>{boton.texto}</p>
-        <ChevronDownIcon />
+      <button onClick={buttonHandler} className="cert-boton">
+        <span className="btnSpan spanVer">Ver más</span>
+        <span className="btnSpan spanOcultar">Ocultar</span>
       </button>
     </div>
   );
