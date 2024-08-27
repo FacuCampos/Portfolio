@@ -102,7 +102,7 @@ const Proyecto = ({ datos }) => {
       <div className="proyectoCardInfo">
         <h3>{titulo}</h3>
         <hr />
-        <p>{descripcion}</p>
+        <p className="proyectoDescripcion">{descripcion}</p>
         <h5>Tecnologias utilizadas</h5>
         <hr />
         <div className="tecsUsadas">
