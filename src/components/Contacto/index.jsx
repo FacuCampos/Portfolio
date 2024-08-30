@@ -3,7 +3,6 @@ import {
   GeoAltFill,
   Github,
   Linkedin,
-  PhoneFill,
 } from "react-bootstrap-icons";
 import { FormContacto, Seccion } from "../../components";
 
@@ -18,12 +17,6 @@ const Contacto = () => {
               <GeoAltFill />
             </div>
             <p> Ciudad Autónoma de Buenos Aires, Argentina</p>
-          </div>
-          <div className="campoInfo">
-            <div className="campoInfoIcon">
-              <PhoneFill />
-            </div>
-            <p>+54 9 11-5835-0704</p>
           </div>
           <a
             href="mailto:facujcampos@gmail.com"
