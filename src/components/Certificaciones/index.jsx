@@ -50,7 +50,7 @@ const Certificaciones = () => {
         <div className="primer-cert">
           {certificados &&
             certificados
-              .slice(1,4)
+              .slice(0,3)
               .map((el, index) => (
                 <Certificado key={`certificado${index + 1}`} data={el} />
               ))}
@@ -64,7 +64,7 @@ const Certificaciones = () => {
         <div className="certDropdownDiv">
           {certificados &&
             certificados
-              .slice(4)
+              .slice(3)
               .map((el, index) => (
                 <Certificado key={`certificado${index + 1}`} data={el} />
               ))}

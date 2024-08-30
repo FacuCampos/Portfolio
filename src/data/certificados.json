@@ -1,9 +1,14 @@
 [
-    {
-      "nombre": "Desarrollo frontend React",
-      "img": "certificado_carrera_frontend.webp",
-      "alt": "Certificado de Desarrollador frontend React"
-    },
+  {
+    "nombre": "Desarrollo de aplicaciones",
+    "img": "certificado_aplicaciones.webp",
+    "alt": "Certificado de Desarrollado de Aplicaciones"
+  },
+  {
+    "nombre": "Desarrollo frontend React",
+    "img": "certificado_carrera_frontend.webp",
+    "alt": "Certificado de Desarrollador frontend React"
+  },
     {
       "nombre": "Desarrollo web",
       "img": "certificado_desarrollo_web.webp",
