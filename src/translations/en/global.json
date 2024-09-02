@@ -1,0 +1,37 @@
+{
+    "navbar":{
+        "title": "menu",
+        "home": "home",
+        "about": "about me",
+        "experience": "experience",
+        "projects": "projects",
+        "contact": "contact",
+        "language": "es"
+    },
+    "header": {
+        "title": "Hello! I'm Facundo",
+        "shortMessage": "Web developer | Full-Stack",
+        "text": "I'm a web developer specialized in React and React Native with good back-end knowledge. I enjoy looking for the most efficient ways to solve problems by making the code as understandable and neat as possible."
+    },
+    "aboutMe":{
+        "title": "about me",
+        "text": [
+            "My name is <b>Facundo Campos</b>, I'm 25 years old and I live in Buenos Aires City, Argentina.",
+            "I'm a <b>front-end developer specialized in React JS</b>. I enjoy learning new technologies, so I'm in constant development.",
+            "I started an Industrial Engineering career when I graduated from high school, but after a few years I realized that it wasn't what I was Interested in. There I had a semester with introduction to programming, a subject that I loved and I realized that it was what I was really passionate about. That's why in 2022 I decided to change course for good.",
+            "I am <b>open to job opportunities</b> where I can contribute, learn and grow professionally."
+        ],
+        "tecnologies": {
+            "title": "tecnologies",
+            "mobile": "mobile apps",
+            "design": "design"
+        },
+        "certificates": {
+            "title":"certificates",
+            "button": [
+                "More",
+                "Hide"
+            ]
+        }
+    }
+}

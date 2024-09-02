@@ -2,8 +2,11 @@ import { useEffect, useState, useRef } from "react";
 import { certificados } from "../../data";
 import { Certificado } from "../../components";
 import { animateScroll } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 const Certificaciones = () => {
+  const {t} = useTranslation("global")
+
   const [verMas, setVerMas] = useState(false);
   const [desktop, setDesktop] = useState(false);
 
@@ -71,8 +74,8 @@ const Certificaciones = () => {
         </div>
       </div>
       <button onClick={buttonHandler} className="cert-boton">
-        <span className="btnSpan spanVer">Ver más</span>
-        <span className="btnSpan spanOcultar">Ocultar</span>
+        <span className="btnSpan spanVer">{t("aboutMe.certificates.button", { returnObjects: true })[0]}</span>
+        <span className="btnSpan spanOcultar">{t("aboutMe.certificates.button", { returnObjects: true })[1]}</span>
       </button>
     </div>
   );

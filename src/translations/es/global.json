@@ -1,0 +1,37 @@
+{
+    "navbar":{
+        "title": "menú",
+        "home": "inicio",
+        "about": "acerca de mí",
+        "experience": "experiencia",
+        "projects": "proyectos",
+        "contact": "contacto",
+        "language": "en"
+    },
+    "header": {
+        "title": "¡Hola! Soy Facundo",
+        "shortMessage": "Desarrollador Web | Full-Stack",
+        "text": "Soy un desarrollador web especializado en React y React Native y con buenos conocimientos de back-end. Disfruto de buscar las formas más eficientes para resolver problemas haciendo el código lo más entendible y prolijo posible."
+    },
+    "aboutMe":{
+        "title": "acerca de mí",
+        "text": [
+            "Me llamo <b>Facundo Campos</b>, tengo 25 años y vivo en Ciudad Autónoma de Buenos Aires, Argentina.",
+            "Soy un <b>programador front-end especializado en React JS</b>. Me gusta aprender a utilizar nuevas tecnologias, por lo que sigo desarrollome constantemente.",
+            "Empecé la carrera de ingenieria industrial al salir del secundario, pero al cabo de unos años me di cuenta que no era lo que me interesaba. Allí tuve un cuatrimestre con introducción a la programación, materia que me encantó y me di cuenta que era lo que realmente me apasionaba. Por eso en 2022 decidí cambiar de rumbo definitivamente.",
+            "Estoy <b>abierto a oportunidades laborales</b> donde pueda contribuir, aprender y crecer profesionalmente."
+        ],
+        "tecnologies": {
+            "title": "tecnologías",
+            "mobile": "apps móbiles",
+            "design": "diseño"
+        },
+        "certificates": {
+            "title":"certificaciones",
+            "button": [
+                "Ver más",
+                "Ocultar"
+            ]
+        }
+    }
+}

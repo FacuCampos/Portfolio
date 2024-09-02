@@ -551,6 +551,15 @@ footer ul svg {
     color: #cb1616;
     transition: all 0.5s;
   }
+  .navegador .nav-dropdown .languageBtn {
+    width: min-content;
+  }
+  .navegador .nav-dropdown .languageBtn .nav-link-div svg {
+    transition: all 0.3s;
+  }
+  .navegador .nav-dropdown .languageBtn .nav-link-div:hover svg {
+    transform: rotateY(180deg);
+  }
 }
 .proyectoCard {
   border: 1px solid transparent;

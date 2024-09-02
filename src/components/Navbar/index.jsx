@@ -7,13 +7,20 @@ import {
   XMarkIcon,
   BriefcaseIcon,
 } from "@heroicons/react/24/outline";
+import { Globe } from "react-bootstrap-icons";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
-  
+  const { t, i18n } = useTranslation("global");
+
+  const handleChangeLanguaje = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   function handleNav() {
     const windowWidth = window.innerWidth;
     const fondoBlur = document.querySelector(".mainClass");
-    console.log(windowWidth)
+    console.log(windowWidth);
 
     if (windowWidth < 920) {
       fondoBlur.classList.toggle("blur");
@@ -44,7 +51,7 @@ const Navbar = () => {
   return (
     <nav id="navbar" className="navegador mostrarMenu">
       <div className="nav-top">
-        <p className="nav-top-texto">Menu</p>
+        <p className="nav-top-texto">{t("navbar.title")}</p>
         <div className="nav-top-div">
           <button
             onClick={() => handleNav()}
@@ -64,13 +71,13 @@ const Navbar = () => {
         <button onClick={() => handleScroll("#inicio")} className="nav-link">
           <div className="nav-link-div">
             <HomeIcon className="nav-link-icon" />
-            <p className="nav-link-text">Inicio</p>
+            <p className="nav-link-text">{t("navbar.home")}</p>
           </div>
         </button>
         <button onClick={() => handleScroll("#acerca")} className="nav-link">
           <div className="nav-link-div">
             <DocumentTextIcon className="nav-link-icon" />
-            <p className="nav-link-text">Acerca de</p>
+            <p className="nav-link-text">{t("navbar.about")}</p>
           </div>
         </button>
         <button
@@ -79,19 +86,25 @@ const Navbar = () => {
         >
           <div className="nav-link-div">
             <BriefcaseIcon className="nav-link-icon" />
-            <p className="nav-link-text">Experiencia</p>
+            <p className="nav-link-text">{t("navbar.experience")}</p>
           </div>
         </button>
         <button onClick={() => handleScroll("#proyectos")} className="nav-link">
           <div className="nav-link-div">
             <CodeBracketIcon className="nav-link-icon" />
-            <p className="nav-link-text">Proyectos</p>
+            <p className="nav-link-text">{t("navbar.projects")}</p>
           </div>
         </button>
         <button onClick={() => handleScroll("#contacto")} className="nav-link">
           <div className="nav-link-div">
             <ChatBubbleLeftRightIcon className="nav-link-icon" />
-            <p className="nav-link-text">Contacto</p>
+            <p className="nav-link-text">{t("navbar.contact")}</p>
+          </div>
+        </button>
+        <button onClick={() => handleChangeLanguaje(t("navbar.language"))} className="nav-link languageBtn">
+          <div className="nav-link-div">
+            <Globe className="nav-link-icon" />
+            <p className="nav-link-text">{t("navbar.language")}</p>
           </div>
         </button>
       </div>

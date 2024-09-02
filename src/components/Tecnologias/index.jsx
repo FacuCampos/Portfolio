@@ -1,7 +1,10 @@
 import { tecnologias } from "../../data";
-import {TecCard} from "../../components";
+import { TecCard } from "../../components";
+import { useTranslation } from "react-i18next";
 
 const Tecnologias = () => {
+  const { t } = useTranslation("global");
+
   const front = tecnologias.filter((el) => el.tipo == "frontend");
   const back = tecnologias.filter((el) => el.tipo == "backend");
   const software = tecnologias.filter((el) => el.tipo == "software");
@@ -10,7 +13,7 @@ const Tecnologias = () => {
 
   return (
     <div className="tecnologias">
-      <h3>Tecnologías</h3>
+      <h3>{t("aboutMe.tecnologies.title")}</h3>
       <hr className="separador" />
       <div className="tecs-contenedor">
         <div className="tecs-front">
@@ -38,7 +41,7 @@ const Tecnologias = () => {
         <div className="tecs-mobile">
           <div className="cat-titulo">
             <hr className="separadorTituloL" />
-            <h4>Apps móbiles</h4>
+            <h4>{t("aboutMe.tecnologies.mobile")}</h4>
             <hr className="separadorTituloR" />
           </div>
           <div className="tec-list">
@@ -62,7 +65,7 @@ const Tecnologias = () => {
         <div className="tecs-design">
           <div className="cat-titulo">
             <hr className="separadorTituloL" />
-            <h4>Diseño</h4>
+            <h4>{t("aboutMe.tecnologies.design")}</h4>
             <hr className="separadorTituloR" />
           </div>
           <div className="tec-list">
