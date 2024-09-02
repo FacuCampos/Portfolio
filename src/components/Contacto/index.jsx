@@ -5,18 +5,22 @@ import {
   Linkedin,
 } from "react-bootstrap-icons";
 import { FormContacto, Seccion } from "../../components";
+import { useTranslation } from "react-i18next";
 
 const Contacto = () => {
+
+  const { t } = useTranslation("global");
+
   return (
-    <Seccion titulo="Contacto" seccion="2" id="contacto">
+    <Seccion titulo={t("contact.title")} seccion="2" id="contacto">
       <div className="contactBox">
         <div className="infoContacto">
-          <h3>Información:</h3>
+          <h3>{t("contact.subtitle")}:</h3>
           <div className="campoInfo">
             <div className="campoInfoIcon">
               <GeoAltFill />
             </div>
-            <p> Ciudad Autónoma de Buenos Aires, Argentina</p>
+            <p>{t("contact.location")}</p>
           </div>
           <a
             href="mailto:facujcampos@gmail.com"
@@ -35,7 +39,7 @@ const Contacto = () => {
             <div className="campoInfoIcon">
               <Linkedin />
             </div>
-            <p>Ver perfil</p>
+            <p>{t("contact.link")}</p>
           </a>
           <a
             href="https://github.com/FacuCampos"

@@ -1,14 +1,20 @@
 [
-    {
-        "trabajo": "Tareas administrativas",
-        "empresa": "Ashoka Construcciones S. A",
-        "inicio": "2018",
-        "finalizacion": "2021"
+  {
+    "trabajo": {
+      "es": "Tareas administrativas",
+      "en": "Administrative duties"
     },
-    {
-        "trabajo": "Diseño y desarrollo web",
-        "empresa": "freelance",
-        "inicio": "2022",
-        "finalizacion": null
-    }
+    "empresa": "Ashoka Construcciones S. A",
+    "inicio": "2018",
+    "finalizacion": "2021"
+  },
+  {
+    "trabajo": {
+      "es": "Diseñador y desarrollador web",
+      "en": "Web designer and developer"
+    },
+    "empresa": "freelance",
+    "inicio": "2022",
+    "finalizacion": null
+  }
 ]

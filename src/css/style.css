@@ -1100,7 +1100,7 @@ footer ul svg {
     width: 100%;
   }
   .contactBox .infoContacto h3 {
-    align-self: left;
+    align-self: flex-start;
   }
   .contactBox .campoMail {
     cursor: pointer;

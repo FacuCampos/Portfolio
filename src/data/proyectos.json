@@ -4,7 +4,10 @@
         "img": "arkhamStore.png",
         "url": "https://entrega-final-campos.vercel.app/",
         "repositorio": "https://github.com/FacuCampos/React-EntregaFinal-Campos",
-        "descripcion": "Este proyecto fue mi trabajo final en el curso de React. Consiste en un ecommerce ficticio que simula una tienda de juegos de mesa. Ofrece una experiencia completa, simulando un proceso de compra.",
+        "descripcion": {
+            "en": "This was my final project in the React course. It consists of a fictional ecommerce that simulates a board game store. It offers a complete experience, simulating the checkout process.",
+            "es": "Este proyecto fue mi trabajo final en el curso de React. Consiste en un ecommerce ficticio que simula una tienda de juegos de mesa. Ofrece una experiencia completa, simulando un proceso de compra."
+        },
         "tecnologias": [
             "Bootstrap",
             "CSS",
@@ -21,7 +24,10 @@
         "titulo": "Bitcoin Cash Academy",
         "img": "bchAcademy.png",
         "url":"https://bch.education/",
-        "descripcion": "Participé en calidad de diseñador y desarrollador web en el desarrollo de este proyecto. El sitio está orientado a proporcionar información detallada sobre Bitcoin Cash. Ha sido creado con el propósito de ofrecer un recurso integral para comprender los aspectos fundamentales y las características de esta criptomoneda.",
+        "descripcion": {
+            "en": "I participated as a web designer and developer in the creation of this project. The site is oriented to provide detailed information about Bitcoin Cash. It has been created with the purpose of providing a comprehensive resource for understanding the basics and main features of this cryptocurrency.",
+            "es": "Participé en calidad de diseñador y desarrollador web en la creación de este proyecto. El sitio está orientado a proporcionar información detallada sobre Bitcoin Cash. Ha sido creado con el propósito de ofrecer un recurso integral para comprender los aspectos fundamentales y las características de esta criptomoneda."
+        },
         "tecnologias":[
             "Bootstrap",
             "HTML",

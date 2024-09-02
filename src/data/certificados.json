@@ -1,37 +1,79 @@
 [
   {
-    "nombre": "Desarrollo de aplicaciones",
+    "nombre": {
+      "en":"Mobile Application Development",
+      "es": "Desarrollo de Aplicaciones Móbiles"
+    },
     "img": "certificado_aplicaciones.webp",
-    "alt": "Certificado de Desarrollado de Aplicaciones"
+    "alt": {
+      "en":"Mobile application development certificate",
+      "es": "Certificado de desarrollado de aplicaciones"
+    }
   },
   {
-    "nombre": "Desarrollo frontend React",
+    "nombre": {
+      "en": "React Front-end Development",
+      "es": "Desarrollo Front-end React"
+    },
     "img": "certificado_carrera_frontend.webp",
-    "alt": "Certificado de Desarrollador frontend React"
+    "alt": {
+      "en": "React front-end developer certificate",
+      "es": "Certificado de desarrollador frontend React"
+    }
   },
     {
-      "nombre": "Desarrollo web",
+      "nombre": {
+        "en":"Web Development",
+        "es": "Desarrollo web"
+      },
       "img": "certificado_desarrollo_web.webp",
-      "alt": "Certificado de desarrollo web"
+      "alt": {
+        "en":"Web development certificate",
+        "es": "Certificado de desarrollo web"
+      }
     },
     {
-      "nombre": "Javascript",
+      "nombre": {
+        "en":"Javascript",
+        "es": "Javascript"
+      },
       "img": "certificado_javascript.webp",
-      "alt": "Certificado de Javascript"
+      "alt": {
+        "en": "Javascript certificate",
+        "es": "Certificado de Javascript"
+      }
     },
     {
-      "nombre": "React JS",
+      "nombre": {
+        "en": "React JS",
+        "es": "React JS"
+      },
       "img": "certificado_react.webp",
-      "alt": "Certificado de React JS"
+      "alt": {
+        "en": "React JS certificate",
+        "es": "Certificado de React JS"
+      }
     },
     {
-      "nombre": "Python",
+      "nombre": {
+        "en": "Python",
+        "es": "Python"
+      },
       "img": "certificado_python.webp",
-      "alt": "Certificado de Python"
+      "alt": {
+        "en": "Python certificate",
+        "es": "Certificado de Python"
+      }
     },
     {
-      "nombre": "PHP + MySQL",
+      "nombre": {
+        "en": "PHP & MySQL",
+        "es": "PHP y MySQL"
+      },
       "img": "certificado_php.webp",
-      "alt": "Certificado de PHP + MySQL"
+      "alt": {
+        "en":"PHP & MySQL certificate",
+        "es": "Certificado de PHP + MySQL"
+      }
     }
   ]

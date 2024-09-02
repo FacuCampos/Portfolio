@@ -33,5 +33,36 @@
                 "Hide"
             ]
         }
+    },
+    "contact":{
+        "title":"contact",
+        "subtitle": "information",
+        "location": "Autonomous City of Buenos Aires, Argentina",
+        "link": "View profile",
+        "form": {
+            "title":"Send email",
+            "name":{
+                "label": "Name",
+                "placeholder": "Enter your name"
+            },
+            "email":{
+                "label": "Email",
+                "placeholder": "Enter your email"
+            },
+            "phone":{
+                "label": "Phone number",
+                "placeholder": "Enter your phone number (optional)"
+            },
+            "message":{
+                "label": "Message",
+                "placeholder": "Enter the message"
+            },
+            "button": "Send"
+        }
+    },
+    "project": {
+        "subtitle": "Technologies used",
+        "codeLink": "View code",
+        "siteLink": "Visit"
     }
 }

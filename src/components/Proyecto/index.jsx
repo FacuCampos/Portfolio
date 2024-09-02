@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   Bootstrap,
   Css,
@@ -23,6 +24,8 @@ import {
 import { Github as GithubRBI, Link } from "react-bootstrap-icons";
 
 const Proyecto = ({ datos }) => {
+  const { t, i18n } = useTranslation("global");
+
   const { titulo, img, url, repositorio, descripcion, tecnologias } = datos;
 
   const imagen = img !== "" ? img : "default.png";
@@ -102,8 +105,8 @@ const Proyecto = ({ datos }) => {
       <div className="proyectoCardInfo">
         <h3>{titulo}</h3>
         <hr />
-        <p className="proyectoDescripcion">{descripcion}</p>
-        <h5>Tecnologias utilizadas</h5>
+        <p className="proyectoDescripcion">{i18n.language === "en" ? descripcion.en : descripcion.es}</p>
+        <h5>{t("project.subtitle")}</h5>
         <hr />
         <div className="tecsUsadas">
           {tecnologias &&
@@ -127,7 +130,7 @@ const Proyecto = ({ datos }) => {
               className="proyectoLink positionLeft"
             >
               <GithubRBI />
-              <p>Ver código</p>
+              <p>{t("project.codeLink")}</p>
             </a>
           )}
           {url && (
@@ -138,7 +141,7 @@ const Proyecto = ({ datos }) => {
               className="proyectoLink positionRight"
             >
               <Link />
-              <p>Visitar</p>
+              <p>{t("project.siteLink")}</p>
             </a>
           )}
         </div>

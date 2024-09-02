@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import Swal from "sweetalert2";
 
 const FormContacto = () => {
+  const { t } = useTranslation("global");
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -37,52 +40,52 @@ const FormContacto = () => {
   return (
     <form onSubmit={onSubmit} className="formulario">
       <div className="tituloFormBox">
-        <h3 className="tituloForm">Enviar correo</h3>
+        <h3 className="tituloForm">{t("contact.form.title")}</h3>
         <hr className="separador" />
       </div>
       <div className="inputBox">
-        <label>Nombre:</label>
+        <label>{t("contact.form.name.label")}:</label>
         <input
           title="Nombre"
           name="name"
           type="text"
           className="campo"
-          placeholder="Ingrese su nombre"
+          placeholder={t("contact.form.name.placeholder")}
           required
         />
       </div>
       <div className="inputBox">
-        <label>Correo:</label>
+        <label>{t("contact.form.email.label")}:</label>
         <input
           title="Correo electrónico"
           name="email"
           type="text"
           className="campo"
-          placeholder="Ingrese su correo electrónico"
+          placeholder={t("contact.form.email.placeholder")}
           required
         />
       </div>
       <div className="inputBox">
-        <label>Teléfono:</label>
+        <label>{t("contact.form.phone.label")}:</label>
         <input
           title="Teléfono"
           name="phone"
           type="text"
           className="campo"
-          placeholder="Ingrese su número de teléfono"
+          placeholder={t("contact.form.phone.placeholder")}
         />
       </div>
       <div className="inputBox">
-        <label>Mensaje:</label>
+        <label>{t("contact.form.message.label")}:</label>
         <textarea
           title="Mensaje"
           name="message"
           className="campo campoMensaje"
-          placeholder="Ingrese el mensaje"
+          placeholder={t("contact.form.message.placeholder")}
         ></textarea>
       </div>
       <button type="submit" className="boton1">
-        Enviar
+        {t("contact.form.button")}
       </button>
     </form>
   );

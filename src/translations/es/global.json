@@ -33,5 +33,36 @@
                 "Ocultar"
             ]
         }
+    },
+    "contact":{
+        "title":"contacto",
+        "subtitle": "información",
+        "location": "Ciudad Autónoma de Buenos Aires, Argentina",
+        "link": "Ver perfil",
+        "form": {
+            "title":"Enviar correo",
+            "name":{
+                "label": "Nombre",
+                "placeholder": "Ingrese su nombre"
+            },
+            "email":{
+                "label": "Correo",
+                "placeholder": "Ingrese su correo electrónico"
+            },
+            "phone":{
+                "label": "Teléfono",
+                "placeholder": "Ingrese su número telefónico (opcional)"
+            },
+            "message":{
+                "label": "Mensaje",
+                "placeholder": "Ingrese el mensaje"
+            },
+            "button": "Enviar"
+        }
+    },
+    "project": {
+        "subtitle": "Tecnologías utilizadas",
+        "codeLink": "Ver código",
+        "siteLink": "Visitar"
     }
 }
