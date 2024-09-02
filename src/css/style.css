@@ -504,6 +504,7 @@ footer ul svg {
 }
 .navegador .nav-dropdown .nav-link {
   width: 100%;
+  transition: all 0.3s ease-out;
 }
 .navegador .nav-dropdown .nav-link .nav-link-div {
   display: flex;
@@ -521,6 +522,9 @@ footer ul svg {
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.4rem;
   margin-top: 3px;
+}
+.navegador .nav-dropdown .nav-link:active {
+  background-color: rgba(15, 15, 15, 0.2);
 }
 
 @media (width >= 992px) {
@@ -550,6 +554,9 @@ footer ul svg {
     background-color: #f5f5f5;
     color: #cb1616;
     transition: all 0.5s;
+  }
+  .navegador .nav-dropdown .nav-link:active {
+    background-color: transparent;
   }
   .navegador .nav-dropdown .languageBtn {
     width: min-content;
