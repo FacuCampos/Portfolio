@@ -124,5 +124,11 @@
     "nombre": "SQLite",
     "img": "sqlite.svg",
     "alt": "Icono de SQLite"
+  },
+  {
+    "tipo": "backend",
+    "nombre": "Wordpress",
+    "img": "wordpress.svg",
+    "alt": "Icono de Wordpress"
   }
 ]

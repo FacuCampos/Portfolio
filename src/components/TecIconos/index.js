@@ -2,8 +2,8 @@ export {default as Bootstrap} from './BootstrapMono';
 export {default as Css} from "./CssMono";
 export {default as Django} from './DjangoMono';
 export {default as Figma} from './FigmaMono'
-export {default as Git} from './GitMono';
 export {default as Github} from './GithubMono';
+export {default as Git} from './GitMono';
 export {default as Html} from "./HtmlMono";
 export {default as Javascript} from './JavascriptMono';
 export {default as Jekyll} from './JekyllMono';
@@ -18,3 +18,4 @@ export {default as Sqlite} from './SqliteMono';
 export {default as Tailwind} from './TailwindMono';
 export {default as Vite} from './ViteMono';
 export {default as VisualStudio} from './VscMono';
+export {default as WordpressMono} from './WordpressMono';

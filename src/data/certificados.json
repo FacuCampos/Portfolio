@@ -75,5 +75,16 @@
         "en":"PHP & MySQL certificate",
         "es": "Certificado de PHP + MySQL"
       }
+    },
+    {
+      "nombre": {
+        "en": "Wordpress",
+        "es": "Wordpress"
+      },
+      "img": "certificado_wordpress.webp",
+      "alt": {
+        "en":"Wordpress certificate",
+        "es": "Certificado de Wordpress"
+      }
     }
   ]
