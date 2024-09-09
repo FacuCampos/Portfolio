@@ -515,6 +515,9 @@ footer ul svg {
   width: 100%;
   padding: 25px;
 }
+.navegador .nav-dropdown .nav-link .nav-link-div .nav-language {
+  height: 30px;
+}
 .navegador .nav-dropdown .nav-link .nav-link-div .nav-link-icon {
   width: 1.4rem;
 }
@@ -532,15 +535,16 @@ footer ul svg {
     display: none;
   }
   .navegador .nav-dropdown {
-    position: sticky;
-    top: 0px;
-    background-color: transparent;
-    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 0;
+    position: sticky;
+    top: 0px;
+    background-color: transparent;
+    height: 80px;
+    padding-right: 60px;
     overflow: hidden;
     clip-path: none;
   }
@@ -548,6 +552,7 @@ footer ul svg {
     cursor: pointer;
   }
   .navegador .nav-dropdown .nav-link .nav-link-div {
+    height: 80px;
     transition: background-color 1s;
   }
   .navegador .nav-dropdown .nav-link .nav-link-div:hover {
@@ -555,17 +560,31 @@ footer ul svg {
     color: #cb1616;
     transition: all 0.5s;
   }
+  .navegador .nav-dropdown .nav-link .nav-link-contacto {
+    padding-right: 45px;
+  }
   .navegador .nav-dropdown .nav-link:active {
     background-color: transparent;
   }
   .navegador .nav-dropdown .languageBtn {
-    width: min-content;
+    width: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
-  .navegador .nav-dropdown .languageBtn .nav-link-div svg {
-    transition: all 0.3s;
+  .navegador .nav-dropdown .languageBtn .languageDiv {
+    padding: 20px 25px;
+    background-color: #f5f5f5;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 6px 20px 0 rgba(62, 62, 62, 0.631372549);
   }
-  .navegador .nav-dropdown .languageBtn .nav-link-div:hover svg {
-    transform: rotateY(180deg);
+  .navegador .nav-dropdown .languageBtn .languageDiv:hover {
+    background-color: #878383;
+  }
+  .navegador .nav-dropdown .languageBtn .languageDiv .nav-language {
+    width: 40px;
+    height: 40px;
   }
 }
 .proyectoCard {
@@ -911,7 +930,14 @@ footer ul svg {
 .acercaInfo .retrato img {
   border-radius: 100%;
 }
-.acercaInfo ul {
+.acercaInfo .infoDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 40px;
+}
+.acercaInfo .infoDiv ul {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -919,11 +945,43 @@ footer ul svg {
   gap: 15px;
   width: calc(100% - 20px);
 }
-.acercaInfo ul li {
+.acercaInfo .infoDiv ul li {
   width: 100%;
 }
-.acercaInfo ul li p {
+.acercaInfo .infoDiv ul li p {
   text-align: justify;
+}
+
+.curriculum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 50px 0 20px 0;
+}
+.curriculum .curriculumBoton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 6px 20px 0 rgba(74, 74, 74, 0.4117647059);
+  background-color: #cb1616;
+  width: 220px;
+  transition: all 0.3s;
+}
+.curriculum .curriculumBoton svg {
+  width: 40px;
+  height: 40px;
+}
+.curriculum .curriculumBoton p {
+  font-weight: 600;
+}
+.curriculum .curriculumBoton:active {
+  transform: scale(0.95);
 }
 
 .tecs-contenedor {
@@ -964,15 +1022,18 @@ footer ul svg {
     display: flex;
     flex-direction: row;
     justify-content: start;
-    align-items: center;
+    align-items: start;
     gap: 40px;
   }
   .acercaInfo .retrato {
-    width: 50%;
+    width: 100%;
     max-width: 400px;
     margin: 0;
   }
-  .acercaInfo ul {
+  .acercaInfo .infoDiv {
+    width: 100%;
+  }
+  .acercaInfo .infoDiv ul {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -980,8 +1041,36 @@ footer ul svg {
     gap: 15px;
     width: 100%;
   }
-  .acercaInfo ul li p {
+  .acercaInfo .infoDiv ul li p {
     text-align: start;
+  }
+  .curriculum {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 70px 0 0px 0;
+  }
+  .curriculum .curriculumBoton {
+    padding: 15px 20px;
+    width: 250px;
+    background-size: 100% 400%;
+    background-image: linear-gradient(180deg, #636363 0%, #878383 25%, #cb1616 85%, #600707 100%);
+    transition: all 0.3s ease-in-out;
+  }
+  .curriculum .curriculumBoton p {
+    font-weight: 400;
+  }
+  .curriculum .curriculumBoton:active {
+    transform: scale(0.95);
+  }
+  .curriculum .curriculumBoton:hover {
+    transform: translateY(-3px);
+  }
+  .curriculum .curriculumBoton:hover, .curriculum .curriculumBoton:focus, .curriculum .curriculumBoton:active {
+    background-position: 0 100%;
+    outline: none;
   }
   .cat-titulo {
     margin-top: 10px;

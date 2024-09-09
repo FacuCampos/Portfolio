@@ -7,7 +7,6 @@ import {
   XMarkIcon,
   BriefcaseIcon,
 } from "@heroicons/react/24/outline";
-import { Globe } from "react-bootstrap-icons";
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
@@ -20,7 +19,6 @@ const Navbar = () => {
   function handleNav() {
     const windowWidth = window.innerWidth;
     const fondoBlur = document.querySelector(".mainClass");
-    console.log(windowWidth);
 
     if (windowWidth < 920) {
       fondoBlur.classList.toggle("blur");
@@ -47,6 +45,8 @@ const Navbar = () => {
 
     handleNav();
   }
+
+  const iconoLenguaje = i18n.language === "en" ? "englishIconRound" : "spanishIconRound"
 
   return (
     <nav id="navbar" className="navegador mostrarMenu">
@@ -96,15 +96,15 @@ const Navbar = () => {
           </div>
         </button>
         <button onClick={() => handleScroll("#contacto")} className="nav-link">
-          <div className="nav-link-div">
+          <div className="nav-link-div nav-link-contacto">
             <ChatBubbleLeftRightIcon className="nav-link-icon" />
             <p className="nav-link-text">{t("navbar.contact")}</p>
           </div>
         </button>
         <button onClick={() => handleChangeLanguaje(t("navbar.language"))} className="nav-link languageBtn">
-          <div className="nav-link-div">
-            <Globe className="nav-link-icon" />
-            <p className="nav-link-text">{t("navbar.language")}</p>
+          <div className="nav-link-div languageDiv">
+            <img src={`./img/icons/${iconoLenguaje}.svg`} className="nav-language" />
+            {window.innerWidth <= 992 && <p className="nav-link-text">{i18n.language === "en" ? "language" : "idioma"}</p>}
           </div>
         </button>
       </div>
