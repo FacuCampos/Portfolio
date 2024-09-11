@@ -46,7 +46,7 @@ const Navbar = () => {
     handleNav();
   }
 
-  const iconoLenguaje = i18n.language === "en" ? "englishIconRound" : "spanishIconRound"
+  const iconoLenguaje = i18n.language === "es" ? "englishIconRound" : "spanishIconRound"
 
   return (
     <nav id="navbar" className="navegador mostrarMenu">
@@ -101,7 +101,7 @@ const Navbar = () => {
             <p className="nav-link-text">{t("navbar.contact")}</p>
           </div>
         </button>
-        <button onClick={() => handleChangeLanguaje(t("navbar.language"))} className="nav-link languageBtn">
+        <button onClick={() => handleChangeLanguaje(t("navbar.language"))} className="nav-link languageBtn" title={i18n.language === "en" ? "Cambiar idioma" : "Change language"}>
           <div className="nav-link-div languageDiv">
             <img src={`./img/icons/${iconoLenguaje}.svg`} className="nav-language" />
             {window.innerWidth <= 992 && <p className="nav-link-text">{i18n.language === "en" ? "language" : "idioma"}</p>}

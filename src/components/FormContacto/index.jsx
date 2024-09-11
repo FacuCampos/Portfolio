@@ -1,8 +1,11 @@
 import { useTranslation } from "react-i18next";
 import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const FormContacto = () => {
-  const { t } = useTranslation("global");
+  const { t, i18n } = useTranslation("global");
+
+  const MySwal = withReactContent(Swal);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -23,16 +26,47 @@ const FormContacto = () => {
     }).then((res) => res.json());
 
     if (res.success) {
-      Swal.fire({
-        title: "¡Enviado!",
-        text: "El mensaje ha sido enviado exitosamente",
-        icon: "success",
-      });
+      MySwal.fire({
+        title: <h2>{i18n.language === "en" ? "Sent!" : "¡Enviado!"}</h2>,
+        html: (
+          <p>
+            {i18n.language === "en"
+              ? "The message has been sent successfully"
+              : "El mensaje ha sido enviado exitosamente"}
+          </p>
+        ),
+        buttonsStyling: false,
+        allowOutsideClick: false,
+        allowEnterKey: false,
+        allowEscapeKey: false,
+        stopKeydownPropagation: false,
+        showCloseButton: true,
+        showClass: {
+          popup: `
+            animate__animated
+            animate__zoomIn
+            animate__faster
+          `,
+        },
+        hideClass: {
+          popup: `
+            animate__animated
+            animate__zoomOut
+            animate__faster
+          `,
+        },
+        customClass: {
+          popup: "emailSendToast",
+        },
+      }).then(event.target.reset());
     } else {
-      Swal.fire({
+      MySwal.fire({
         title: "Error!",
         text: "Ha ocurrido un error al intentar enviar el mensaje",
         icon: "error",
+        customClass: {
+          popup: "emailSendToast",
+        },
       });
     }
   };
