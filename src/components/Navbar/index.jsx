@@ -104,7 +104,7 @@ const Navbar = () => {
         <button onClick={() => handleChangeLanguaje(t("navbar.language"))} className="nav-link languageBtn" title={i18n.language === "en" ? "Cambiar idioma" : "Change language"}>
           <div className="nav-link-div languageDiv">
             <img src={`./img/icons/${iconoLenguaje}.svg`} className="nav-language" />
-            {window.innerWidth <= 992 && <p className="nav-link-text">{i18n.language === "en" ? "language" : "idioma"}</p>}
+            {window.innerWidth <= 992 && <p className="nav-link-text">{i18n.language === "en" ? "Español" : "English"}</p>}
           </div>
         </button>
       </div>
