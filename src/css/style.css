@@ -474,7 +474,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: rgba(217, 217, 217, 0.0901960784);
+  background-color: rgba(217, 217, 217, 0.0901960784) !important;
   padding: 50px;
 }
 footer ul {
@@ -491,7 +491,7 @@ footer ul svg {
   height: 40px;
 }
 
-@media (width >= 600px) {
+@media (width >= 769px) {
   footer ul svg {
     transition: all 0.5s ease-in-out;
   }
