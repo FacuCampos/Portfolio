@@ -17,7 +17,7 @@ html {
 
 a {
   text-decoration: none;
-  color: inherit !important;
+  color: inherit;
 }
 
 :root {
@@ -491,7 +491,7 @@ footer ul svg {
   height: 40px;
 }
 
-@media (width >= 992px) {
+@media (width >= 600px) {
   footer ul svg {
     transition: all 0.5s ease-in-out;
   }
