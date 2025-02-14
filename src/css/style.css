@@ -26,7 +26,7 @@ a {
   font-size: 1rem;
   line-height: 1.8rem;
   color: rgba(255, 255, 255, 0.7490196078) !important;
-  background-color: #242424;
+  background-color: #242424 !important;
 }
 
 .mainClass {
@@ -474,7 +474,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: rgba(217, 217, 217, 0.0901960784) !important;
+  background-color: #242424 !important;
   padding: 50px;
 }
 footer ul {
